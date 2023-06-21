@@ -1,0 +1,561 @@
+@font-face{
+    font-family:Ayer Deck medium;
+    src: url(./AyerDeckMedium.ttf);
+}
+@font-face{
+    font-family:Ayer Deck italic;
+    src: url(./AyerPosterRegularItalic.ttf);
+}
+@font-face{
+    font-family:Ayer Deck regular;
+    src: url(./AyerDeckRegular.ttf);
+}
+@font-face{
+    font-family:EpilogueVariableFont;
+    src: url(./EpilogueVariableFont_wght.ttf);
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#main {
+  width: 100%;
+  background-color: #EDEBE3;
+}
+*::selection{
+    background-color: #000;
+    color: #fff;
+}
+#page1{
+    width: 100%;
+    height: 85vh;
+    position: relative;
+}
+#page1 #nav{
+    width: 100%;
+    height: 8vh;
+    font-family:Ayer Deck medium;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid #000;
+}
+#nav h1{
+    width: 50%;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+#nav #nav-middle{
+    height: 100%;
+    width: 35%;
+    display: flex;
+    align-items: last baseline;
+    justify-content:center;
+    gap: 70px;
+    margin-bottom: 25px;
+}
+#nav-middle h2{
+    font-family:Ayer Deck regular;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#nav #nav-icon{
+    height: 100%;
+    width:15% ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 10px;
+    gap: 10px;
+}
+#nav-icon img{
+    width: 15%;
+    cursor: pointer;
+}
+#page1 #hero{
+    width: 100%;
+    height: calc(85vh - 16vh);
+    position: relative;
+    background-color: #fff;
+    background-image: url(https://harinaentrepiedras.com/wp-content/uploads/2022/03/7v9a9087-1.jpg);
+    background-size: cover;
+    background-position-y: -230px;
+}
+#hero #card{
+    width: 250px;
+    height: 410px;
+    background-color: #D66E45;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#hero #card h5{
+    font-family:Ayer Deck regular;
+    width: 100%;
+    height: 25%;
+    font-size: 20px;
+    text-align: center;
+    padding: 25px 0;
+    line-height: 19px;
+    color:#392118;
+}
+#hero #card img{
+    width: 50%;
+}
+#hero #card p{
+    width: 100%;
+    height: 24%;
+    font-family:EpilogueVariableFont;
+    font-size: 11px;
+    font-weight: 100;
+    text-align: center;
+    padding: 25px 0;
+    line-height: 13px;
+    color:#392118;
+}
+#hero #card input{
+    width: 85%;
+    height: 24px;
+    border: none;
+    background-color: #D66E45;
+    border-bottom: 1px solid #000;
+    padding: 0 85px;
+    outline: none;
+    margin-bottom: 22px;
+}
+::placeholder{
+    color: #392118;
+    font-size: 13px;
+    font-family:EpilogueVariableFont;
+}
+#hero #card h3{
+    font-size: 17px;
+    font-family:Ayer Deck regular;
+    width: 85%;
+    height: 40px;
+    background-color:#7d3e25;
+    color: #eb9877;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page1 #hero #card #two{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    font-family:EpilogueVariableFont ;
+}
+#card #two input {
+    height: 15px;
+    width: 15px;
+    margin-left: 18px;
+    margin-right: 2px;
+    color:#392118;
+    background-color: #D66E45;
+}
+#card #two h6{
+    font-size: 9px;
+    margin-bottom: 20px;
+    color:#392118;
+}
+#hero #card a{
+    color:#392118;
+    font-size: 9px;
+}
+#page1 #scrollbar{
+    width: 100%;
+    height: 8vh;
+    background-color:#D66E45;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 19px 0;
+    border-bottom: 1px solid #000;
+}
+#scrollbar h3{
+    font-family:Ayer Deck regular;
+    color:#452b21;
+    font-weight: 100;
+    font-size: 25px;
+    display: inline-block;
+    margin-right: 15px;
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes move {
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(calc(-100% - 22px));
+    }
+}
+#scrollbar::-webkit-scrollbar{
+    display: none;
+}
+#page2{
+    width: 100%;
+    height: 95vh;
+    position: relative;
+}
+#page2 #page2-info{
+    width: 100%;
+    height: 35vh;
+    position: relative;
+    display: flex;
+    font-family:Ayer Deck regular;
+    border-bottom: 1px solid #000;
+}
+#page2-info #part1-info{
+    height: 100%;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px;
+    border-right: 1px solid #000 ;
+}
+#part1-info h3{
+    width: 35%;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+}
+#part1-info h1{
+    width: 70%;
+    height: 100%;
+    font-size: 33px;
+    font-weight: 100;
+    display: flex;
+    justify-content: flex-end;
+}
+#part2-info{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#page2 #part2-info img{
+    width: 40%;
+    margin-top: 50px;
+}
+#part2-info h4{
+    font-family:EpilogueVariableFont;
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 20px;
+    text-align: center;
+}
+#page2 .info-nav{
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family:Ayer Deck regular;
+    border-bottom: 1px solid #000;
+    padding: 0 30px;
+    background-color: #EDEBE3;
+}
+.info-nav h3{
+    font-size: 25px;
+    font-weight: 500;
+}
+.info-nav .info-end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.info-nav .info-end h3{
+    font-size: 24px;
+    font-weight: 100;
+    color: #000000bf;
+}
+.info-end i{
+    font-size: 20px;
+    color: #000000bf;
+    font-weight: 100;
+}
+#products{
+    width: 100%;
+    height: calc(95vh - 42vh);
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #000;
+}
+#products #p1{
+    height: 100%;
+    width: 25%;
+    position: relative;
+    border-right: 1px solid #000;
+    background-image: url(https://harinaentrepiedras.com/wp-content/uploads/2021/05/ep_5kg_eco_trigo_integral_completo-1920x2351.png);
+    background-size: contain;
+    background-position: center;
+}
+#products #p1:hover{
+    background-image: url(https://harinaentrepiedras.com/wp-content/uploads/2021/04/ep_pan_hogaza_integral.png);
+    background-size: contain;
+    background-position: center;
+}
+#products #p2{
+    height: 100%;
+    width: 25%;
+    position: relative;
+    border-right: 1px solid #000;
+    background-image: url(https://harinaentrepiedras.com/wp-content/uploads/2021/06/ep_5kg_selecta_gran_fuerza_00-1920x2351-1.png);
+    background-size: contain;
+    background-position: center;
+}
+#products #p2:hover{
+    background-image: url(https://harinaentrepiedras.com/wp-content/uploads/2021/06/ep_pan_viena.png);
+    background-size: contain;
+    background-position: center;
+}
+#products #p3{
+    height: 100%;
+    width: 25%;
+    position: relative;
+    border-right: 1px solid #000;
+    background-image: url(https://harinaentrepiedras.com/wp-content/uploads/2021/05/ep_5kg_selecta_trad_francesa-1920x2351.png);
+    background-size: contain;
+    background-position: center;
+}
+#products #p3:hover{
+    background-image: url(https://harinaentrepiedras.com/wp-content/uploads/2021/04/ep_pan_frances.png);
+    background-size: contain;
+    background-position: center;
+}
+#products #p4{
+    height: 100%;
+    width: 25%;
+}
+#products .btm-txt{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family:Ayer Deck regular;
+    padding: 0 30px;
+}
+#products .btm-txt h6{
+    font-size: 17px;
+    font-weight: 100;
+}
+#page3{
+    width: 100%;
+    height: 70vh;
+}
+#page3 #image{
+    width: 100%;
+    height: 85%;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    border-bottom: 1px solid #000;
+}
+#page3 #image #img1{
+    height: 100%;
+    width: 50%;
+    position: relative;
+    background-image: url(https://harinaentrepiedras.com/wp-content/uploads/2022/10/img_0741-scaled-e1665061266975.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#page3 #image #img2{
+    height: 100%;
+    width: 50%;
+    position: relative;
+    background-image: url(https://harinaentrepiedras.com/wp-content/uploads/2022/10/alex-lvrs-ffqsz3eug0u-unsplash-scaled-e1666174216853.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    color: #fff;
+    background-color: #D36D45;
+    opacity: 0;
+    transition: all ease .5s;
+}
+.overlay h5{
+    font-size: 16px;
+    font-weight: 500;
+    font-family:Ayer Deck regular;
+    margin-bottom: 30px;
+    color: #EDEBE3;
+}
+.overlay h3{
+    font-size: 60px;
+    font-family:Ayer Deck italic;
+    font-weight: 200;
+    line-height: 58px;
+}
+.overlay:hover{
+    opacity: 1;
+}
+#page3 #materials{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    font-family:Ayer Deck regular;
+    border-bottom: 1px solid #000;
+}
+#materials .mat{
+    height: 100%;
+    width: 25%;
+    border-right: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.3s;
+}
+#materials .mat h4{
+    font-size: 32px;
+    font-weight: 500;
+    color: #000;
+}
+#materials .mat:hover{
+    background-color: #D56E46;
+}
+#materials .mat:hover h4{
+    color: #fff;
+}
+#footer{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    background-color: #EDEBE3;
+    border-bottom: 1px solid #000;
+}
+#footer #foot1{
+    height: 100%;
+    width: 50%;
+    border-right: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#foot1 h5{
+    font-family:Ayer Deck regular;
+    width: 100%;
+    height: 25%;
+    font-size: 23px;
+    font-weight: 100;
+    text-align: center;
+    padding: 25px 0;
+    line-height: 19px;
+    color:#392118;
+}
+#footer #foot1 input{
+    width: 45%;
+    height: 24px;
+    border: none;
+    background-color:#EDEBE3;
+    border-bottom: 1px solid #000;
+    padding: 0 140px;
+    outline: none;
+    margin-bottom: 22px;
+}
+#foot1 h3{
+    font-size: 17px;
+    font-family:Ayer Deck regular;
+    width: 45%;
+    height: 40px;
+    background-color:#7d3e25;
+    color: #eb9877;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer #foot1 #three{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    font-family:EpilogueVariableFont ;
+}
+#foot1 #three input {
+    height: 15px;
+    width: 15px;
+    margin-left: 26.9%;
+    margin-right: 2px;
+    color:#392118;
+    background-color: #D66E45;
+}
+#foot1 #three h6{
+    font-size: 9px;
+    margin-bottom: 20px;
+    color:#392118;
+}
+#footer #foot2{
+    height: 100%;
+    width: 25%;
+    border-right: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 30px 20px;
+}
+#footer #foot2 h6{
+    font-size: 12px;
+    font-family:EpilogueVariableFont;
+    color: #000000be;
+}
+#footer #foot3{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 10px;
+    padding: 30px 20px;
+}
+#foot3 h6{
+    font-size: 12px;
+    font-family:EpilogueVariableFont;
+    color: #000000be; 
+}
+#foot3 #foot-img{
+    display: flex;
+    gap: 10px;
+    filter: grayscale();
+}
+#end{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#end h6{
+    font-size: 10px;
+    font-family:EpilogueVariableFont;
+    color: #000000be; 
+}
